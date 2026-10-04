@@ -11,21 +11,21 @@ struct playerType {
 
 
 
-pub fn create_dealer(){
+pub fn create_dealer() -> dealerType {
     let dealer = dealerType {
         id: 1,  
         chips: 1000
-    }
+    };
 
     return dealer;
-};
+}
 
-pub fn create_player(entered_name: String){
+pub fn create_player(entered_name: String) -> playerType {
     let player = playerType {
         id: 2,
         name: entered_name,
         chips: 1000
-    }
+    };
 
     return player;
-};
+}

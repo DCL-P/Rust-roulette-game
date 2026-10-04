@@ -1,5 +1,5 @@
 use std::io;
-use create::players;
+use crate::players;
 
 //[?] apperently u need to specify the return type when u use something like ? after statements (like on line 17)
 pub fn game_loop()-> Result<(), Box<dyn std::error::Error>> {
@@ -14,7 +14,7 @@ pub fn game_loop()-> Result<(), Box<dyn std::error::Error>> {
         let mut answer = String::new();
 
         //[!] read_line returns a Result, which can return an Ok() or Err() object. So make sure if u want to print the value, trim it first to unwrap out of the Ok or Err object
-        //[!] ? basically just means (if value is Ok, continue. Err? stop!)
+        //[?] basically just means (if value is Ok, continue. Err? stop!)
         stdin.read_line(&mut answer)?;
 
 
